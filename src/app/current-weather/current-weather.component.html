@@ -9,14 +9,13 @@
     <div>
 
       {{current.date | date: 'fullDate'}}
-    </div>>
+    </div>
     <div>
       <img src="{{current.image}}">
-      <span>{{current.temperature | number : '1.0-0'}}</span>
+      <span>{{current.temperature | number : '1.0-0'}} °F </span>
     </div>
     <div>
       <span>{{current.description}}</span>
     </div>
   </div>
-
 </div>

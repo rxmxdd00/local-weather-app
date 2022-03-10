@@ -13,7 +13,7 @@ import { NgModule } from '@angular/core';
   imports: [
     BrowserModule,
     AppRoutingModule,
-
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

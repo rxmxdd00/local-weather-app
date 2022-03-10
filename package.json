@@ -10,7 +10,9 @@
     "e2e": "ng e2e",
     "cypress:open": "cypress open",
     "cypress:run": "cypress run",
-    "build:prod": "ng build --prod"
+    "build:prod": "ng build --prod",
+    "prenow:publish": "npm run build:prod",
+    "now:publish": "now --platform-version 2 dist/local-weather-app"
   },
   "private": true,
   "dependencies": {
