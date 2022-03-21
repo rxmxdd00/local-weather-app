@@ -5,6 +5,7 @@ import { autoSpyObj, injectSpy } from 'angular-unit-test-helper';
 import { By } from '@angular/platform-browser';
 import { CurrentWeatherComponent } from './current-weather.component';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { MaterialModule } from '../material.module';
 import { WeatherService } from '../weather/weather.service';
 import { of } from 'rxjs';
 
@@ -17,7 +18,7 @@ describe('CurrentWeatherComponent', () => {
     jasmine.createSpyObj(WeatherService,['getCurrentWeather'])
     await TestBed.configureTestingModule({
       declarations: [ CurrentWeatherComponent ],
-      imports: [ HttpClientTestingModule ],
+      imports: [ HttpClientTestingModule, MaterialModule],
       providers: [{
         provide: WeatherService, useValue: weatherServiceSpy
       }]
